@@ -24,9 +24,9 @@ public class Usuario {
 
     }
 
-    public Usuario(Conta conta, String nome, String email, Date dataDeNascimento,
+    public Usuario(String nome, String email, Date dataDeNascimento,
                    String telefone, String rg, String cpf, String senha) {
-        this.conta = conta;
+
         this.nome = nome;
         this.email = email;
         this.dataDeNascimento = dataDeNascimento;
