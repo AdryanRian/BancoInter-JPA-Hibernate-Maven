@@ -1,6 +1,7 @@
 package br.com.BancoInter.Entidades;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import javax.persistence.*;
 
 
@@ -17,18 +18,20 @@ public class Usuario {
     private String rg;
     private String cpf;
     private String senha;
+    private LocalDate dataCadastro = LocalDate.now();
+    @Enumerated (EnumType.STRING) // Passa o nome do enum e o ORIGNAL passa a posição
+    private Categoria categoria;
 
-    public Usuario(){
 
-    }
 
-    public Usuario(String nome, String telefone, String rg, String cpf, String senha) {
+    public Usuario(String nome, String telefone, String rg, String cpf, String senha, Categoria categoria) {
 
         this.nome = nome;
         this.telefone = telefone;
         this.rg = rg;
         this.cpf = cpf;
         this.senha = senha;
+        this.categoria = categoria;
     }
 
     public Long getId() {

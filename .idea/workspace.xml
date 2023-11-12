@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8368345b-58df-4751-b85a-587c375d2023" name="Changes" comment="Versão do projeto com JPA, persistencia feita e classe usuário incompleta">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/dao/UsuarioDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/util/JPAutil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,7 @@
       <list>
         <option value="XML Properties File" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -115,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698937016808</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Versão do projeto com JPA, persistencia feita e classe usuário incompleta">
+      <option name="closed" value="true" />
+      <created>1699803319121</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803319122</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
