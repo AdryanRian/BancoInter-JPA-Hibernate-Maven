@@ -5,22 +5,68 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
          http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-    <!-- É Necessário ter a teg persistence-unit(é como se fosse um banco de dados, cada banco tem um)-->
-    <persistence-unit name="Banco Inter" transaction-type="RESOURCE_LOCAL"><!--Pode usar também o JTA é para servidor de Aplicação para transação-->
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <persistence-unit name="BancoInterFinal" transaction-type="RESOURCE_LOCAL">
+        <!-- Configurações do provedor de persistência (provider), classes de entidade, etc. -->
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.driver" /><!--Aqui indica qual o drive e a classe do driver-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/ProjetoBancoInter"/><!--Onde vai estar-->
-            <property name="javax.persistence.jdbc.user" value="root" /><!--usuário-->
-            <property name="javax.persistence.jdbc.password" value="bancointer" /><!--senha-->
-            <!-- Configurações específicas do Hibernate -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/projetobancointer?useTimezone=true&amp;serverTimezone=UTC" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="bancointer" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
         </properties>
+    </persistence-unit>
 
-
-        </persistence-unit>
 
 </persistence>
+
+
+
+
+
+<!--    &lt;!&ndash; É Necessário ter a tag persistence-unit(é como se fosse um banco de dados, cada banco tem um)&ndash;&gt;-->
+<!--    <persistence-unit name="BancoInterFinal" transaction-type="RESOURCE_LOCAL">&lt;!&ndash;Pode usar também o JTA é para servidor de Aplicação para transação&ndash;&gt;-->
+
+
+<!--        <properties>-->
+<!--            &lt;!&ndash; Configuração do SGBD &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.url"-->
+<!--                      value="jdbc:mysql://localhost/bancointerteste?useTimezone=true&amp;serverTimezone=UTC" />-->
+<!--            <property name="javax.persistence.jdbc.user"-->
+<!--                      value="root" />-->
+<!--            <property name="javax.persistence.jdbc.password"-->
+<!--                      value="bancointer" />-->
+<!--            <property name="javax.persistence.jdbc.driver"-->
+<!--                      value="com.mysql.cj.jdbc.Driver" />-->
+<!--            &lt;!&ndash; Configuração do Hibernate &ndash;&gt;-->
+<!--            <property name="hibernate.dialect"-->
+<!--                      value="org.hibernate.dialect.MySQL5Dialect" />-->
+<!--            <property name="hibernate.format_sql"-->
+<!--                      value="true" />-->
+<!--            <property name="hibernate.show_sql"-->
+<!--                      value="true" />-->
+<!--            <property name="hibernate.hbm2ddl.auto"-->
+<!--                      value="update" />-->
+<!--        </properties>-->
+
+
+
+<!--        <provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+<!--        <properties>-->
+<!--            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.driver" />&lt;!&ndash;Aqui indica qual o drive e a classe do driver&ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/ProjetoBancoInter-->
+<!--            useTimezone=true&amp;serverTimezone=UTC"/>&lt;!&ndash;Onde vai estar&ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.user" value="root" />&lt;!&ndash;usuário&ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.password" value="bancointer" />&lt;!&ndash;senha&ndash;&gt;-->
+<!--            &lt;!&ndash; Configurações específicas do Hibernate &ndash;&gt;-->
+
+<!--        </properties>-->
+
+
+<!--        </persistence-unit>-->
+
+<!--</persistence>-->
+
