@@ -1,13 +1,11 @@
 package br.com.BancoInter.Aplicacao;
 
-import br.com.BancoInter.Entidades.Categoria;
+import Enums.Categoria;
 import br.com.BancoInter.Entidades.Usuario;
 import br.com.BancoInter.dao.UsuarioDao;
 import br.com.BancoInter.util.JPAutil;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class MainAplicacao {
     public static void main(String[] args) {
@@ -24,14 +22,14 @@ public class MainAplicacao {
 //        Adryan.setSenha("111111");
 //        Adryan.setTelefone("81984479047");
 
-        Usuario Maria = new Usuario("Maria","8195556542","000000000","00000000000",
-                "000000", Categoria.PESSOA_FISICA);
+        Usuario Adryan = new Usuario("Adryan Rian ","adryanrian14@gmail.com",81,"00000000000",
+                "10.269.392","137.717.994-06", "84479047", Categoria.TRABALHADOR);
 
 
 
         em.getTransaction().begin();//Avisa para o banco iniciar a transação (Não precisa se estiver em JTA no lugar de Resoucer local)
         UsuarioDao dao = new UsuarioDao(em);
-        dao.cadastrar(Maria);
+        dao.cadastrar(Adryan);
        // AGORA ESTÁ NA CLASSE DAO em.persist(Rian);//Adiciona no Banco
         em.getTransaction().commit();//Finaliza as transações no banco de dados
         em.close(); //finalzar

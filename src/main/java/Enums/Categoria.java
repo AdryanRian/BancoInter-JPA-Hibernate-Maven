@@ -1,4 +1,4 @@
-package br.com.BancoInter.Entidades;
+package Enums;
 
 public enum Categoria {
 

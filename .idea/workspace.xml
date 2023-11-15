@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8368345b-58df-4751-b85a-587c375d2023" name="Changes" comment="Versão do projeto com JPA, persistencia feita e classe usuário incompleta">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Categoria.java" afterDir="false" />
+    <list default="true" id="8368345b-58df-4751-b85a-587c375d2023" name="Changes" comment="enum categoria de usuário">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enums/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699803319122</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="enum categoria de usuário">
+      <option name="closed" value="true" />
+      <created>1699823666326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699823666327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,7 +144,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Versão do projeto com JPA, persistencia feita e classe usuário incompleta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão do projeto com JPA, persistencia feita e classe usuário incompleta" />
+    <MESSAGE value="enum categoria de usuário" />
+    <option name="LAST_COMMIT_MESSAGE" value="enum categoria de usuário" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
