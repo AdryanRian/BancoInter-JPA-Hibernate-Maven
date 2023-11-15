@@ -1,7 +1,5 @@
 package br.com.BancoInter.Entidades;
 
-import Enums.Categoria;
-
 import java.time.LocalDate;
 import javax.persistence.*;
 
@@ -27,8 +25,10 @@ public class Usuario {
     private String senha;
     @Column(name = "Dia_de_Cadastro")
     private LocalDate dataCadastro = LocalDate.now();
-    @Enumerated (EnumType.STRING) // Passa o nome do enum e o ORIGNAL passa a posição
+    //@Enumerated (EnumType.STRING) // Passa o nome do enum e o ORIGNAL passa a posição
+    @OneToOne
     private Categoria categoria;
+
 
 
 
