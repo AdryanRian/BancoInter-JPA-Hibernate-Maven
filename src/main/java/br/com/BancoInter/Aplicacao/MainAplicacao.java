@@ -34,33 +34,96 @@ public class MainAplicacao {
                         System.out.println("0 - Voltar");
                         System.out.println("\nDigite a sua opção: ");
 
-                         menu1sub1 = scan.nextInt();
+                        menu1sub1 = scan.nextInt();
 
-                    }while (menu1sub1 != 0);
+                        switch (menu1sub1) {
+                            case 1:
+
+                                // FAZER O LOGIN, EDIÇÃO DE TABELA E CONFERIR A SENHA
+
+                                System.out.println("\nDigite o seu CPF:\n");
+                                System.out.println("Digite a sua senha:\n");
+
+                                break; // MOMENTANEO
+
+                            // MENU CONTA
+
+                            case 2:
+
+                                System.out.println("\nDigite o seu CNPJ:\n");
+                                System.out.println("Digite a sua senha:\n");
+
+                                break; // MOMENTANEO
+
+                            // MENU CONTA
+
+                            case 0:
+                                break;
+
+                            default:
+
+                                System.out.println("\nOpção inválida. Tente novamente.\n");
+
+
+                        }
+
+                    } while (menu1sub1 != 0);
                     break;
 
                 case 2:
 
                     int menu1sub2;
                     do {
+
+                        System.out.println("========================================");
                         System.out.println("\nQual tipo de conta deseja criar?\n");
                         System.out.println("1 - Pessoa Física");
                         System.out.println("2 - Pessoa Jurídica");
                         System.out.println("0 - Voltar");
                         System.out.println("\nDigite a sua opção: ");
 
-                    menu1sub2 = scan.nextInt();
-                    }while (menu1sub2 != 0);
+                        menu1sub2 = scan.nextInt();
+
+                        switch (menu1sub2) {
+                            case 1:
+
+
+
+                                System.out.println("\nDigite o seu CPF:\n");
+                                System.out.println("Digite a sua senha:\n");
+
+                                break; // MOMENTANEO
+
+                            // MENU CONTA
+
+                            case 2:
+
+                                System.out.println("\nDigite o seu CNPJ:\n");
+                                System.out.println("Digite a sua senha:\n");
+
+                                break; // MOMENTANEO
+
+                            // MENU CONTA
+
+                            case 0:
+                                break;
+
+                            default:
+
+                                System.out.println("\nOpção inválida. Tente novamente.\n");
+                        }
+                    } while (menu1sub2 != 0);
+
                     break;
 
                 case 0:
 
-                    System.out.println("Programa finalizado.");
+                    System.out.println("\nPrograma finalizado.\n");
                     break;
 
                 default:
 
-                    System.out.println("Opção inválida. Tente novamente.");
+                    System.out.println("\nOpção inválida. Tente novamente.\n");
 
 
             }

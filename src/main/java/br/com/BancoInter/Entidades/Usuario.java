@@ -18,31 +18,23 @@ public class Usuario {
     private int DDD;
     @Column(name = "Contato")
     private String telefone;
-    @Column(name = "N°_Identidade")
-    private String rg;
-    @Column(name = "N°_Cpf")
-    private String cpf;
     private String senha;
     @Column(name = "Dia_de_Cadastro")
-    private LocalDate dataCadastro = LocalDate.now();
+    private final LocalDate dataCadastro = LocalDate.now();
     //@Enumerated (EnumType.STRING) // Passa o nome do enum e o ORIGNAL passa a posição
-    @OneToOne
-    private Categoria categoria;
+//    @OneToOne
+//    private Categoria categoria;
 
 
 
 
 
-    public Usuario(String nome,String email,int DDD, String telefone, String rg, String cpf, String senha, Categoria categoria) {
+    public Usuario(String nome,String email,int DDD, String telefone) {
 
         this.nome = nome;
         this.email = email;
         this.DDD = DDD;
         this.telefone = telefone;
-        this.rg = rg;
-        this.cpf = cpf;
-        this.senha = senha;
-        this.categoria = categoria;
     }
 
     public Long getId() {
@@ -69,21 +61,7 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public String getRg() {
-        return rg;
-    }
 
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 
     public String getSenha() {
         return senha;
