@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 public class Usuario {
     @Id //Define chave primária
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
     @Column(name = "Nome") // Aqui define o nome da Coluna caso queira que seja diferente
     private String nome;
@@ -17,7 +17,7 @@ public class Usuario {
     private String email;
     private int DDD;
     @Column(name = "Contato")
-    private String telefone;
+    private float telefone;
     private String senha;
     @Column(name = "Dia_de_Cadastro")
     private final LocalDate dataCadastro = LocalDate.now();
@@ -29,7 +29,7 @@ public class Usuario {
 
 
 
-    public Usuario(String nome,String email,int DDD, String telefone) {
+    public Usuario(String nome,String email,int DDD, float telefone) {
 
         this.nome = nome;
         this.email = email;
@@ -53,11 +53,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getTelefone() {
+    public float getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(float telefone) {
         this.telefone = telefone;
     }
 

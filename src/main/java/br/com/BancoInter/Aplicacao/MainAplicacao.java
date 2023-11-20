@@ -1,8 +1,7 @@
 package br.com.BancoInter.Aplicacao;
 
-import br.com.BancoInter.Entidades.Categoria;
-import br.com.BancoInter.Entidades.Usuario;
-import br.com.BancoInter.dao.CategoriaDao;
+import br.com.BancoInter.Entidades.UsuarioPessoaFisica;
+//import br.com.BancoInter.dao.CategoriaDao;
 import br.com.BancoInter.dao.UsuarioDao;
 import br.com.BancoInter.util.JPAutil;
 
@@ -11,8 +10,8 @@ import java.util.Scanner;
 
 public class MainAplicacao {
     public static void main(String[] args) {
-//        EntityManager em = JPAutil.getEntityManger();//     AGORA ESTÁ NO JPA UTIL EntityManagerFactory factory = Persistence.
-//        UsuarioDao produtoDao = new UsuarioDao(em);
+        EntityManager em = JPAutil.getEntityManger();//     AGORA ESTÁ NO JPA UTIL EntityManagerFactory factory = Persistence.
+        UsuarioDao UsuarioDao = new UsuarioDao(em);
 //        CategoriaDao categoriaDao = new CategoriaDao(em);
         Scanner scan = new Scanner(System.in);
         int menu1;
@@ -87,10 +86,37 @@ public class MainAplicacao {
                         switch (menu1sub2) {
                             case 1:
 
+                                System.out.println("Crie sua conta:");
+
+                                System.out.println("Digite o seu E-mail:\n");
+                                String email = scan.next();
+
+                                scan.nextLine();
+
+                                System.out.println("Digite o seu Nome:\n");
+                                String nome = scan.nextLine();
+
+                                System.out.println("Digite o seu CPF:\n");
+                                float cpf = scan.nextFloat();
+
+                                System.out.println("Digite o seu DDD:\n");
+                                int ddd = scan.nextInt();
+
+                                System.out.println("Digite o seu Telefone:\n");
+                                float telefone = scan.nextFloat();
+
+                                System.out.println("Digite o seu rg:\n");
+                                float rg = scan.nextFloat();
 
 
-                                System.out.println("\nDigite o seu CPF:\n");
-                                System.out.println("Digite a sua senha:\n");
+                                UsuarioPessoaFisica usuarioPessoaFisica = new UsuarioPessoaFisica(nome, email, cpf,
+                                        ddd, telefone, rg);
+
+                                em.getTransaction().begin();
+                                UsuarioDao.cadastrar(usuarioPessoaFisica);
+                                em.getTransaction().commit();
+                                em.close();
+
 
                                 break; // MOMENTANEO
 

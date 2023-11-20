@@ -9,30 +9,30 @@ import javax.persistence.Table;
 public class UsuarioPessoaFisica extends Usuario{
 
     @Column(name = "N°_Identidade")
-    private String rg;
+    private float rg;
     @Column(name = "N°_Cpf")
-    private String cpf;
+    private float cpf;
 
-    public UsuarioPessoaFisica(String nome, String email, int DDD, String telefone, String rg, String cpf) {
+    public UsuarioPessoaFisica(String nome, String email, float cpf, int DDD, float telefone, float rg) {
         super(nome, email, DDD, telefone);
         this.rg = rg;
         this.cpf = cpf;
     }
 
 
-    public String getRg() {
+    public float getRg() {
         return rg;
     }
 
-    public void setRg(String rg) {
+    public void setRg(float rg) {
         this.rg = rg;
     }
 
-    public String getCpf() {
+    public float getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(float cpf) {
         this.cpf = cpf;
     }
 }
