@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "Usuarios PF")
+//@Table (name = "Usuarios PF")
 public class UsuarioPessoaFisica extends Usuario{
 
     @Column(name = "N°_Identidade")

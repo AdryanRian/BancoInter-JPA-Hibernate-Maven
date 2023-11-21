@@ -2,6 +2,7 @@ package br.com.BancoInter.Aplicacao;
 
 import br.com.BancoInter.Entidades.UsuarioPessoaFisica;
 //import br.com.BancoInter.dao.CategoriaDao;
+import br.com.BancoInter.Entidades.UsuarioPessoaJuridica;
 import br.com.BancoInter.dao.UsuarioDao;
 import br.com.BancoInter.util.JPAutil;
 
@@ -124,8 +125,40 @@ public class MainAplicacao {
 
                             case 2:
 
-                                System.out.println("\nDigite o seu CNPJ:\n");
-                                System.out.println("Digite a sua senha:\n");
+                                System.out.println("Crie sua conta:");
+
+                                System.out.println("Digite o E-mail da Empresa:\n");
+                                email = scan.next();
+
+                                scan.nextLine();
+
+                                System.out.println("Digite o Nome de Registro da Empresa:\n");
+                                nome = scan.nextLine();
+
+                                scan.nextLine();
+
+                                System.out.println("Digite o Nome Fantasia da Empresa:\n");
+                                String nomeFantasia = scan.nextLine();
+
+                                System.out.println("Digite o N° do CNPJ:\n");
+                                float cnpj = scan.nextFloat();
+
+                                System.out.println("Digite o N° da Inscrição Estadual:\n");
+                                float ie = scan.nextFloat();
+
+                                System.out.println("Digite o seu DDD:\n");
+                                ddd = scan.nextInt();
+
+                                System.out.println("Digite o seu Telefone:\n");
+                                telefone = scan.nextFloat();
+
+                                UsuarioPessoaJuridica usuarioPessoaJuridica = new UsuarioPessoaJuridica(nome,email,ddd,
+                                        telefone,cnpj,nomeFantasia,ie);
+
+                                em.getTransaction().begin();
+                                UsuarioDao.cadastrar(usuarioPessoaJuridica);
+                                em.getTransaction().commit();
+                                em.close();
 
                                 break; // MOMENTANEO
 

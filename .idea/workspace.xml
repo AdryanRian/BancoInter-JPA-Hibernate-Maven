@@ -7,11 +7,8 @@
     <list default="true" id="8368345b-58df-4751-b85a-587c375d2023" name="Changes" comment="Criação de PF e PJ.&#10;Evolução no menu.&#10;Edição do construtor de Usuário">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Aplicacao/MainAplicacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Categoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/UsuarioPessoaFisica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/UsuarioPessoaFisica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/UsuarioPessoaJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/Entidades/UsuarioPessoaJuridica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/dao/CategoriaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/BancoInter/dao/CategoriaDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700428686470</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Criação de PF e PJ.&#10;Evolução no menu.&#10;Edição do construtor de Usuário">
+      <option name="closed" value="true" />
+      <created>1700525009556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700525009556</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
