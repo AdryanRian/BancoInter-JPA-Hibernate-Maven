@@ -6,10 +6,12 @@ import javax.persistence.*;
 
 @Entity // Avisa ao JPA que isso é uma entidade
 @Table(name = "Usuarios") // O Nome da Tabela, caso não queira o nome da entidade
-
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_entidade", discriminatorType = DiscriminatorType.STRING)
 public class Usuario {
     @Id //Define chave primária
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     @Column(name = "Nome") // Aqui define o nome da Coluna caso queira que seja diferente
     private String nome;
@@ -17,7 +19,7 @@ public class Usuario {
     private String email;
     private int DDD;
     @Column(name = "Contato")
-    private float telefone;
+    private String telefone;
     private String senha;
     @Column(name = "Dia_de_Cadastro")
     private final LocalDate dataCadastro = LocalDate.now();
@@ -29,7 +31,7 @@ public class Usuario {
 
 
 
-    public Usuario(String nome,String email,int DDD, float telefone) {
+    public Usuario(String nome,String email,int DDD, String telefone) {
 
         this.nome = nome;
         this.email = email;
@@ -53,11 +55,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public float getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(float telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

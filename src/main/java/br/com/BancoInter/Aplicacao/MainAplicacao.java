@@ -98,16 +98,16 @@ public class MainAplicacao {
                                 String nome = scan.nextLine();
 
                                 System.out.println("Digite o seu CPF:\n");
-                                float cpf = scan.nextFloat();
+                                String cpf = scan.next();
 
                                 System.out.println("Digite o seu DDD:\n");
                                 int ddd = scan.nextInt();
 
                                 System.out.println("Digite o seu Telefone:\n");
-                                float telefone = scan.nextFloat();
+                                String telefone = scan.next();
 
                                 System.out.println("Digite o seu rg:\n");
-                                float rg = scan.nextFloat();
+                                String rg = scan.next();
 
 
                                 UsuarioPessoaFisica usuarioPessoaFisica = new UsuarioPessoaFisica(nome, email, cpf,
@@ -141,16 +141,16 @@ public class MainAplicacao {
                                 String nomeFantasia = scan.nextLine();
 
                                 System.out.println("Digite o N° do CNPJ:\n");
-                                float cnpj = scan.nextFloat();
+                                String cnpj = scan.next();
 
                                 System.out.println("Digite o N° da Inscrição Estadual:\n");
-                                float ie = scan.nextFloat();
+                                String ie = scan.next();
 
                                 System.out.println("Digite o seu DDD:\n");
                                 ddd = scan.nextInt();
 
                                 System.out.println("Digite o seu Telefone:\n");
-                                telefone = scan.nextFloat();
+                                telefone = scan.next();
 
                                 UsuarioPessoaJuridica usuarioPessoaJuridica = new UsuarioPessoaJuridica(nome,email,ddd,
                                         telefone,cnpj,nomeFantasia,ie);

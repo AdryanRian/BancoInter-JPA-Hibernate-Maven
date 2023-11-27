@@ -1,35 +1,33 @@
 package br.com.BancoInter.Entidades;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-//@Table (name =  "Usuario PJ")
+//@Table (name =  "Usuario PJ") ERRO
+@DiscriminatorValue("Usuario PJ")
 public class UsuarioPessoaJuridica extends Usuario {
 
     @Id
     @Column(name = "N° do CNPJ")
-    private float Cnpj;
+    private String Cnpj;
     @Column (name = "Nome Fantasia")
     private String nomeFantasia;
     @Column (name = "Inscrição Estadual")
-    private float inscricaoEstadual;
+    private String inscricaoEstadual;
 
-    public UsuarioPessoaJuridica(String nome, String email, int DDD, float telefone, float Cnpj, String nomeFantasia
-    ,float inscricaoEstadual) {
+    public UsuarioPessoaJuridica(String nome, String email, int DDD, String telefone, String Cnpj, String nomeFantasia
+    ,String inscricaoEstadual) {
         super(nome, email, DDD, telefone);
         this.Cnpj = Cnpj;
         this.nomeFantasia = nomeFantasia;
         this.inscricaoEstadual = inscricaoEstadual;
     }
 
-    public Float getCnpj() {
+    public String getCnpj() {
         return Cnpj;
     }
 
-    public void setCnpj(Float cnpj) {
+    public void setCnpj(String cnpj) {
         Cnpj = cnpj;
     }
 
@@ -41,11 +39,11 @@ public class UsuarioPessoaJuridica extends Usuario {
         this.nomeFantasia = nomeFantasia;
     }
 
-    public Float getInscricaoEstadual() {
+    public String getInscricaoEstadual() {
         return inscricaoEstadual;
     }
 
-    public void setInscricaoEstadual(Float inscricaoEstadual) {
+    public void setInscricaoEstadual(String inscricaoEstadual) {
         this.inscricaoEstadual = inscricaoEstadual;
     }
 }
